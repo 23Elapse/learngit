@@ -2,7 +2,7 @@
  * @Author: Yu userszy@163.com
  * @Date: 2023-12-10 11:18:34
  * @LastEditors: Yu userszy@163.com
- * @LastEditTime: 2023-12-10 12:10:32
+ * @LastEditTime: 2023-12-10 15:18:38
  * @FilePath: /learngit/test1.c
  * @Description: 
  * 
@@ -19,7 +19,20 @@ int main()
     return 0;
 }
 
-struct inv_data
+#define inv_riio_sun_ii_data_num        86
+
+typedef struct inv_data
 {
     /* data */
-};
+    uint16_t inv_device_add;
+    uint16_t inv_net_add;
+    uint8_t  inv_device_data;
+    uint8_t  inv_data_attrebute; 
+}inv_data;
+
+inv_data inv_riio_sun_ii_data[inv_riio_sun_ii_data_num] = 
+{
+    {0x0100, 0x0100, 0x12, 0x21},
+    {0x0100, 0x0100, 0x12, 0x21},
+
+}
